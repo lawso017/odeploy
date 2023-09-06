@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: stackgres
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: stackgres
+  namespace: argocd
+spec:
+  description: stackgres project related
+  destinations:
+    - namespace: stackgres
+      server: https://kubernetes.default.svc
+  sourceRepos:
+    - https://stackgres.io/downloads/stackgres-k8s/stackgres/helm/
+  clusterResourceWhitelist:
+    - group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+    - group: rbac.authorization.k8s.io
+      kind: ClusterRole
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: stackgres-operator
+  namespace: argocd
+spec:
+  project: stackgres
+  source:
+    chart: stackgres-operator
+    helm:
+      parameters:
+        - name: adminui.service.type
+          value: NodePort
+    repoURL: https://stackgres.io/downloads/stackgres-k8s/stackgres/helm/
+    targetRevision: 1.5.0
+  destination:
+    namespace: stackgres
+    server: https://kubernetes.default.svc
+  ignoreDifferences:
+    # Ignoring replicas because a job will manage the replica count
+    # If we don't then ArgoCD will keep resetting this to 0.
+    - group: apps
+      kind: Deployment
+      jsonPointers:
+        - /spec/replicas
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
