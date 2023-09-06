@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - sg-distributed-logs-config.yaml
   - sg-instance-profile.yaml
   - sg-pooling-config.yaml
   - sg-postgres-config.yaml
