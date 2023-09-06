@@ -23,6 +23,6 @@ version: 0.1.0
 appVersion: "1.0"
 
 dependencies:
-- name: stackgres-operator
+- name: stackgres-charts/stackgres-operator
   version: 1.5.0
   repository: https://stackgres.io/downloads/stackgres-k8s/stackgres/helm/
