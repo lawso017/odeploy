@@ -2,7 +2,7 @@ apiVersion: stackgres.io/v1
 kind: SGPostgresConfig
 metadata:
   namespace: stackgres
-  name: pgconfig1
+  name: pgconfig14
 spec:
   postgresVersion: "14"
   postgresql.conf:

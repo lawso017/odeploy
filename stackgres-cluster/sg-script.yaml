@@ -1,0 +1,15 @@
+apiVersion: stackgres.io/v1
+kind: SGScript
+metadata:
+  namespace: stackgres
+  name: cluster-scripts
+spec:
+  scripts:
+  - name: create-pgbench-user
+    scriptFrom:
+      secretKeyRef:
+        name: pgbench-user-password-secret
+        key: pgbench-create-user-sql
+  - name: create-pgbench-database
+    script: |
+            create database pgbench owner pgbench;
