@@ -23,7 +23,7 @@ metadata:
   name: stackgres-operator
   namespace: argocd
 spec:
-  project: stackgres
+  project: stackgres-foo
   source:
     chart: stackgres-operator
     helm:
