@@ -14,6 +14,7 @@ spec:
     - namespace: stackgres
       server: https://kubernetes.default.svc
   sourceRepos:
+    - https://github.com/lawso017/odeploy.git
     - https://stackgres.io/downloads/stackgres-k8s/stackgres/helm/
   clusterResourceWhitelist:
     - group: rbac.authorization.k8s.io
