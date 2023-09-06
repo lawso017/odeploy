@@ -2,10 +2,10 @@ apiVersion: stackgres.io/v1
 kind: SGCluster
 metadata:
   namespace: stackgres
-  name: pgbench
+  name: testing
 spec:
   postgres:
-    version: '14'
+    version: '14.8'
   instances: 3
   sgInstanceProfile: 'size-small'
   pods:
