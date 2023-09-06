@@ -50,12 +50,3 @@ spec:
     automated:
       selfHeal: true
       prune: true
----
-apiVersion: stackgres.io/v1
-kind: SGInstanceProfile
-metadata:
-  namespace: stackgres
-  name: size-small
-spec:
-  cpu: "2"
-  memory: "4Gi"
