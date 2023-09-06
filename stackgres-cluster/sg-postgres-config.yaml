@@ -4,7 +4,7 @@ metadata:
   namespace: stackgres
   name: pgconfig14
 spec:
-  postgresVersion: "14.8"
+  postgresVersion: "14"
   postgresql.conf:
     shared_buffers: '512MB'
     random_page_cost: '1.5'
