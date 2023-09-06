@@ -4,8 +4,8 @@ metadata:
   namespace: stackgres
   name: pgbench
 spec:
-  # postgres:
-  #   version: '14'
+  postgres:
+    version: '14'
   instances: 3
   sgInstanceProfile: 'size-small'
   pods:
