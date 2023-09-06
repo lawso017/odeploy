@@ -1,29 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
-  name: stackgres
-  namespace: argocd
-spec:
-  description: stackgres project related
-  destinations:
-    - namespace: stackgres
-      server: https://kubernetes.default.svc
-  sourceRepos:
-    - https://github.com/lawso017/odeploy.git
-    - https://stackgres.io/downloads/stackgres-k8s/stackgres/helm/
-  clusterResourceWhitelist:
-    - group: rbac.authorization.k8s.io
-      kind: ClusterRoleBinding
-    - group: rbac.authorization.k8s.io
-      kind: ClusterRole
----
-apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: stackgres-operator
   namespace: argocd
 spec:
-  project: stackgres-foo
   source:
     chart: stackgres-operator
     helm:
