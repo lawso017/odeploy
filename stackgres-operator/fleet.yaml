@@ -17,8 +17,10 @@ helm:
   # Used if repo is set to look up the version of the chart
   version: "1.5.0"
 
-  # Force recreate resource that can not be updated
-  force: false
+  valuesFiles:
+    - values.yaml
+
+  releaseName: stackgres-operator
 
   # How long for helm to wait for the release to be active. If the value
   # is less that or equal to zero, we will not wait in Helm
