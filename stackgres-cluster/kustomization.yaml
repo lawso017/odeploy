@@ -5,4 +5,4 @@ resources:
   - sg-instance-profile.yaml
   - sg-pooling-config.yaml
   - sg-postgres-config.yaml
-
+  - sg-script.yaml
