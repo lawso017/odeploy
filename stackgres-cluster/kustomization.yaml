@@ -6,3 +6,4 @@ resources:
   - sg-pooling-config.yaml
   - sg-postgres-config.yaml
   - sg-script.yaml
+  - sg-cluster.yaml
