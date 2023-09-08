@@ -1,0 +1,4 @@
+defaultNamespace: stackgres
+
+dependsOn:
+  - name: stackgres-operator-stackgres-operator
