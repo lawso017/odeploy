@@ -7,7 +7,7 @@ spec:
   postgres:
     version: '14.8'
   instances: 3
-  sgInstanceProfile: 'size-small'
+  sgInstanceProfile: 'size-medium'
   pods:
     persistentVolume:
       size: '10Gi'
