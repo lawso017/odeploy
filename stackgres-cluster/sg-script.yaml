@@ -4,14 +4,13 @@ metadata:
   namespace: stackgres
   name: cluster-scripts
 spec:
+  continueOnError: true
   scripts:
   - name: create-pgbench-user
-    continueOnError: true
     scriptFrom:
       secretKeyRef:
         name: pgbench-user-password-secret
         key: pgbench-create-user-sql
   - name: create-pgbench-database
-    continueOnError: true
     script: |
             create database pgbench owner pgbench;
