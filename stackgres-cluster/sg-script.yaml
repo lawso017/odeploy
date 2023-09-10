@@ -12,5 +12,6 @@ spec:
         name: pgbench-user-password-secret
         key: pgbench-create-user-sql
   - name: create-pgbench-database
+    continueOnError: true
     script: |
             create database pgbench owner pgbench;
