@@ -6,6 +6,7 @@ metadata:
 spec:
   scripts:
   - name: create-pgbench-user
+    continueOnError: true
     scriptFrom:
       secretKeyRef:
         name: pgbench-user-password-secret
