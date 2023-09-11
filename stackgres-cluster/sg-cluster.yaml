@@ -18,9 +18,9 @@ spec:
     # - sgObjectStorage: 'backupconfig1'
     #   cronSchedule: '*/5 * * * *'
     #   retention: 6
-  managedSql:
-    scripts:
-    - sgScript: cluster-scripts
+  # managedSql:
+  #   scripts:
+  #   - sgScript: cluster-scripts
   distributedLogs:
     sgDistributedLogs: 'distributedlogs'
   prometheusAutobind: true
