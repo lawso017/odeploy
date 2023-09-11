@@ -1,4 +1,4 @@
 defaultNamespace: percona
 
 dependsOn:
-  - name: percona-operator-percona-operator
+  - name: percona-percona-operator
