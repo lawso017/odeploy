@@ -27,6 +27,6 @@ helm:
   timeoutSeconds: 0
 
   # Custom values that will be passed as values.yaml to the installation
-  values:
-    postgresqlVersion: 14
-    pmm.enabled: true
+  # values:
+  #   postgresqlVersion: 14
+  #   pmm.enabled: true
