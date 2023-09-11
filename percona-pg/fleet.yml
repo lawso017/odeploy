@@ -17,8 +17,8 @@ helm:
   # Used if repo is set to look up the version of the chart
   # version: "2.2.0"
 
-  # valuesFiles:
-  #   - values.yaml
+  valuesFiles:
+    - values.yaml
 
   releaseName: percona-pg
 
@@ -27,9 +27,9 @@ helm:
   timeoutSeconds: 0
 
   # Custom values that will be passed as values.yaml to the installation
-  values:
-    postgresqlVersion: 14
-    pmm.enabled: true
+  # values:
+  #   postgresqlVersion: 14
+  #   pmm.enabled: true
 
 dependsOn:
   - name: percona-operator-percona-operator
