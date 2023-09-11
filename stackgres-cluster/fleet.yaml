@@ -8,4 +8,4 @@ diff:
   - apiVersion: apps/v1
     kind: Deployment
     operations:
-    - {"op":"remove", "path":"/spec/managedSql/scripts/0/sgScript"}
+    - {"op":"remove", "path":"/spec/managedSql/scripts/0/sgScript/cluster-scripts"}
