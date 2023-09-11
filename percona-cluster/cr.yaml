@@ -73,10 +73,10 @@ spec:
   instances:
   - name: pgbench-test
     replicas: 3
-   resources:
-     limits:
-       cpu: 4.0
-       memory: 8Gi
+    resources:
+      limits:
+        cpu: 4.0
+        memory: 8Gi
 #
 #    sidecars:
 #    - name: testcontainer
