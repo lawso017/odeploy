@@ -78,9 +78,9 @@ spec:
         cpu: 4.0
         memory: 8Gi
 
-    sidecars:
-    - name: utility
-      image: perconalab/percona-distribution-postgresql:14
+    # sidecars:
+    # - name: utility
+    #   image: perconalab/percona-distribution-postgresql:14
 #    - name: testcontainer2
 #      image: mycontainer1:latest
 #
