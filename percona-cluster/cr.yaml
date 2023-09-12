@@ -77,10 +77,10 @@ spec:
       limits:
         cpu: 4.0
         memory: 8Gi
-#
-#    sidecars:
-#    - name: testcontainer
-#      image: mycontainer1:latest
+
+    sidecars:
+    - name: utility
+      image: perconalab/percona-distribution-postgresql:14
 #    - name: testcontainer2
 #      image: mycontainer1:latest
 #
