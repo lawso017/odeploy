@@ -1,3 +1,2 @@
-service.type: 'Cluster IP'
 nodeSelector:
-  percona-pmm: 'server'
+  percona-pmm: server
