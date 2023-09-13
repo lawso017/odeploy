@@ -1,4 +1,5 @@
 secret:
   create: false
+  name: pmm-secret
 nodeSelector:
   percona-pmm: server
