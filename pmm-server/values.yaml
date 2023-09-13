@@ -1,0 +1,3 @@
+ingress.enabled: true
+nodeSelector:
+  pmm-server: true
