@@ -261,6 +261,7 @@ spec:
     imagePullPolicy: IfNotPresent
     secret: cluster1-pmm-secret
     serverHost: monitoring-service.pmm-server
+
   patroni:
     dynamicConfiguration:
       postgresql:
