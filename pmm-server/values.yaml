@@ -1,3 +1,4 @@
 ingress.enabled: true
+ingress.nginxInc: true
 nodeSelector:
   percona-pmm: 'server'
