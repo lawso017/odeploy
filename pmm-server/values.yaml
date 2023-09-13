@@ -1,3 +1,3 @@
-service.name: ClusterIP
+service.type: ClusterIP
 nodeSelector:
   percona-pmm: 'server'
