@@ -1,0 +1,5 @@
+defaultNamespace: percona
+
+dependsOn:
+  - name: percona-percona-operator
+  - name: percona-pmm-server
