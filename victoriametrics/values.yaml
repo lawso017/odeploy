@@ -329,7 +329,7 @@ vmcluster:
       #      - vminsert.domain.com
 
 alertmanager:
-  enabled: true
+  enabled: false
   annotations: {}
   # spec for VMAlertmanager crd
   # https://docs.victoriametrics.com/operator/api.html#vmalertmanagerspec
