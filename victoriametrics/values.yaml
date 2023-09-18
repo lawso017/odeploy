@@ -499,7 +499,7 @@ alertmanager:
 
 vmalert:
   annotations: {}
-  enabled: true
+  enabled: false
 
   # Controls whether VMAlert should use VMAgent or VMInsert as a target for remotewrite
   remoteWriteVMAgent: false
