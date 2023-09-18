@@ -36,8 +36,6 @@ spec:
     spec:
       tolerations:
       - operator: Exists
-      nodeSelector:
-        node.longhorn.io/create-default-disk: 'config'
       containers:
       - name: label-nodes
         image: busybox
