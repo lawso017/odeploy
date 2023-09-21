@@ -9,18 +9,18 @@ helm:
   # The directory of the chart in the repo.  Also any valid go-getter supported
   # URL can be used there is specify where to download the chart from.
   # If repo below is set this value if the chart name in the repo
-  chart: "rancher-monitoring"
+  chart: "rancher-monitoring-crd"
 
   # An https to a valid Helm repository to download the chart from
   repo: "https://charts.rancher.io"
 
   # Used if repo is set to look up the version of the chart
-  version: "102.0.1+up40.1.2"
+  # version: "102.0.1+up40.1.2"
 
-  valuesFiles:
-    - values.yaml
+  # valuesFiles:
+  #   - values.yaml
 
-  releaseName: rancher-monitoring
+  releaseName: rancher-monitoring-crd
 
   # How long for helm to wait for the release to be active. If the value
   # is less that or equal to zero, we will not wait in Helm
@@ -30,7 +30,3 @@ helm:
   # values:
   #   postgresqlVersion: 14
   #   pmm.enabled: true
-
-dependsOn:
-  - name: rancher-monitoring-rancher-monitoring-crd
-
