@@ -12,7 +12,7 @@ helm:
   chart: "rancher-monitoring"
 
   # An https to a valid Helm repository to download the chart from
-  repo: "https://github.com/rancher/charts"
+  repo: "https://charts.rancher.io"
 
   # Used if repo is set to look up the version of the chart
   version: "102.0.1+up40.1.2"
