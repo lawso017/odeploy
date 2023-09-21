@@ -30,6 +30,7 @@ spec:
         ports:
           - containerPort: 9100
             protocol: TCP
+            name: prometheus
         resources:
           limits:
             cpu: 250m
