@@ -3,7 +3,7 @@ kind: VMPodScrape
 apiVersion: operator.victoriametrics.com/v1beta1
 metadata:
   name: node-exporter
-  namespace: monitoring-system
+  namespace: monitoring
 spec:
   selector:
     matchLabels:
