@@ -91,7 +91,7 @@ alertmanager:
           receiver: 'null'
     templates:
       - /etc/alertmanager/config/*.tmpl
-  enabled: false
+  enabled: true
   extraSecret:
     annotations: {}
     data: {}
@@ -914,7 +914,7 @@ prometheus:
           runAsUser: 101
           runAsGroup: 101
     disableCompaction: false
-    enableAdminAPI: false
+    enableAdminAPI: true
     enableFeatures: []
     enableRemoteWriteReceiver: false
     enforcedLabelLimit: false
@@ -970,11 +970,11 @@ prometheus:
     replicas: 1
     resources:
       limits:
-        cpu: '3'
-        memory: 3000Mi
+        cpu: 1000m
+        memory: 6000Mi
       requests:
-        cpu: '1.5'
-        memory: 1750Mi
+        cpu: 750m
+        memory: 3000Mi
     retention: 10d
     retentionSize: 50GiB
     routePrefix: /
