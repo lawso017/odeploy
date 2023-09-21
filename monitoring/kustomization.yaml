@@ -4,3 +4,7 @@ resources:
   - node-exporter.yaml
   - github.com/VictoriaMetrics/operator/config/default?ref=v0.38.0
   - vm-pod-scrape.yaml
+
+images:
+- name: victoriametrics/operator
+  newTag: v0.38.0
