@@ -1,0 +1,4 @@
+defaultNamespace: pmm-client
+
+dependsOn:
+  - name: percona-pmm-client
