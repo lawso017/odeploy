@@ -31,7 +31,7 @@ spec:
               key: password
         ports:
         - containerPort: 9190
-        command: ["/bin/omnilogic_exporter --omnilogic.username=${OMNILOGIC_USERNAME} --omnilogic.password=${OMNILOGIC_PASSWORD}"]
+        command: ["/bin/omnilogic_exporter --help"]
         resources:
           limits:
             cpu: "1"
