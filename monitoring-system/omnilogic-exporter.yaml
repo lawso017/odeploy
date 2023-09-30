@@ -29,18 +29,13 @@ spec:
             secretKeyRef:
               name: omnilogic-exporter
               key: password
-        command: ["/bin/omnilogic_exporter --omnilogic.username=lawson.bj@gmail.com --omnilogic.password=FOO}"]
----
-apiVersion: v1
-kind: Service
-metadata:
-   name: omnilogic-exporter
-   namespace: monitoring-system
-spec:
-   type: NodePort
-   selector:
-      app.kubernetes.io/name: omnilogic-exporter
-   ports:
-      - port: 9190
-        targetPort: 9190
-        nodePort: 39190
+        ports:
+        - containerPort: 9190
+        command: ["/bin/omnilogic_exporter --help"]
+        resources:
+          limits:
+            cpu: "1"
+            memory: "512Mi"
+          requests:
+            cpu: "0.5"
+            memory: "256Mi"
