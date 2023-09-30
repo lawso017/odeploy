@@ -41,6 +41,6 @@ spec:
    selector:
       app.kubernetes.io/name: omnilogic-exporter
    ports:
-      - port: 39190
+      - port: 9190
         targetPort: 9190
-        nodePort: 9190
+        nodePort: 39190
