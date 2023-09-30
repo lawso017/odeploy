@@ -15,7 +15,7 @@ helm:
   # valuesFiles:
   #   - values.yaml
 
-  releaseName: vm-operator
+  releaseName: vm-k8s
 
   # How long for helm to wait for the release to be active. If the value
   # is less that or equal to zero, we will not wait in Helm
