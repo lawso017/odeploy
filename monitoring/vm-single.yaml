@@ -3,3 +3,12 @@ kind: VMSingle
 metadata:
   name: vm-database
   namespace: monitoring
+spec:
+  retentionPeriod: 90d
+  storage:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: 10Gi
+    storageClassName: longhorn
