@@ -10,7 +10,7 @@ helm:
   repo: "https://victoriametrics.github.io/helm-charts/"
 
   # Used if repo is set to look up the version of the chart
-  version: "0.38.0"
+  version: "0.27.1"
 
   # valuesFiles:
   #   - values.yaml
