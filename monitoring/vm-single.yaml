@@ -4,6 +4,8 @@ metadata:
   name: vm-database
   namespace: monitoring
 spec:
+  extraArgs:
+    selfScrapeInterval: 10s
   retentionPeriod: 90d
   storage:
     accessModes:
