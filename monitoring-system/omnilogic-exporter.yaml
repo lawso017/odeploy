@@ -50,4 +50,4 @@ spec:
    ports:
       - port: 9190
         targetPort: 9190
-        nodePort: 39190
+        nodePort: 30190
