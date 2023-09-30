@@ -1,4 +1,4 @@
 defaultNamespace: monitoring-system
 
 dependsOn:
-  - name: percona-victoriametrics-operator
+  - name: percona-vm
