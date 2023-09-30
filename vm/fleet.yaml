@@ -12,8 +12,8 @@ helm:
   # Used if repo is set to look up the version of the chart
   version: "0.18.2"
 
-  # valuesFiles:
-  #   - values.yaml
+  valuesFiles:
+    - values.yaml
 
   releaseName: vm-k8s
 
