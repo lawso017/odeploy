@@ -29,7 +29,7 @@ spec:
             secretKeyRef:
               name: omnilogic-exporter
               key: password
-        command: ["/bin/omnilogic_exporter"]
+        command: ["/bin/omnilogic_exporter --omnilogic.username=lawson.bj@gmail.com}"]
         resources:
           limits:
             cpu: "1"
