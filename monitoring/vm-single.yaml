@@ -2,4 +2,4 @@ apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMSingle
 metadata:
   name: vm-database
-  namespace: monitoring-system
+  namespace: monitoring
