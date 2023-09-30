@@ -18,9 +18,20 @@ spec:
       containers:
       - name: omnilogic-exporter
         image: kmbulebu/omnilogic_exporter
+        env:
+        - name: OMNILOGIC_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: omnilogic-exporter
+              key: username
+        - name: OMNILOGIC_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: omnilogic-exporter
+              key: password
         ports:
         - containerPort: 9190
-        command: ["/bin/omnilogic_exporter"]
+        command: ["/bin/omnilogic_exporter --omnilogic.username=${OMNILOGIC_USERNAME} --omnilogic.password=${OMNILOGIC_PASSWORD}"]
         resources:
           limits:
             cpu: "1"
