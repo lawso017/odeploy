@@ -16,22 +16,22 @@ spec:
         app.kubernetes.io/name: omnilogic-exporter
     spec:
       containers:
-      - name: omnilogic-exporter
-        image: kmbulebu/omnilogic_exporter
-        imagePullPolicy: IfNotPresent
+      - args: ["--omnilogic.username=${OMNILOGIC_USERNAME}", "--omnilogic.password=${OMNILOGIC_PASSWORD}"]
+        command: ["/bin/omnilogic_exporter"]
         env:
         - name: OMNILOGIC_USERNAME
           valueFrom:
             secretKeyRef:
-              name: omnilogic-exporter
               key: username
+              name: omnilogic-exporter
         - name: OMNILOGIC_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: omnilogic-exporter
               key: password
-        command: ["/bin/omnilogic_exporter"]
-        args: ["--omnilogic.username=${OMNILOGIC_USERNAME}", "--omnilogic.password=${OMNILOGIC_PASSWORD}"]
+              name: omnilogic-exporter
+        image: kmbulebu/omnilogic_exporter
+        imagePullPolicy: IfNotPresent
+        name: omnilogic-exporter        
         ports:
         - containerPort: 9190
           name: omnilogic
