@@ -33,4 +33,4 @@ diff:
     name: vm-k8s-victoria-metrics-k8s-stack
     namespace: monitoring-system
     operations:
-    - {"op": "remove", "path": "/spec/extraArgs" }
+    - {"op": "remove", "path": "/spec" }
