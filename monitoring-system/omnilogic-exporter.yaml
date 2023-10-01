@@ -29,7 +29,8 @@ spec:
             secretKeyRef:
               name: omnilogic-exporter
               key: password
-        command: ["/bin/omnilogic_exporter --omnilogic.username=${OMNILOGIC_USERNAME} --omnilogic.password=${OMNILOGIC_PASSWORD}"]
+        command: ["/bin/omnilogic_exporter"]
+        args: ["--omnilogic.username=${OMNILOGIC_USERNAME}", "--omnilogic.password=${OMNILOGIC_PASSWORD}"]
         resources:
           limits:
             cpu: "1"
