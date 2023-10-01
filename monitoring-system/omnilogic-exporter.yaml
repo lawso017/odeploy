@@ -22,29 +22,29 @@ spec:
         command:
         - "/bin/omnilogic_exporter"
         env:
-        - name: OMNILOGIC_USERNAME
+        - name: "OMNILOGIC_USERNAME"
           valueFrom:
             secretKeyRef:
-              key: username
-              name: omnilogic-exporter
-        - name: OMNILOGIC_PASSWORD
+              key: "username"
+              name: "omnilogic-exporter"
+        - name: "OMNILOGIC_PASSWORD"
           valueFrom:
             secretKeyRef:
-              key: password
-              name: omnilogic-exporter
-        image: kmbulebu/omnilogic_exporter
-        imagePullPolicy: IfNotPresent
-        name: omnilogic-exporter
+              key: "password"
+              name: "omnilogic-exporter"
+        image: "kmbulebu/omnilogic_exporter:latest"
+        imagePullPolicy: "IfNotPresent"
+        name: "omnilogic-exporter"
         ports:
         - containerPort: 9190
-          name: omnilogic
-          protocol: TCP
+          name: "omnilogic"
+          protocol: "TCP"
         readinessProbe:
           failureThreshold: 3
           httpGet:
-            path: /
-            port: omnilogic
-            scheme: HTTP
+            path: "/"
+            port: "omnilogic"
+            scheme: "HTTP"
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
@@ -55,14 +55,14 @@ spec:
           requests:
             cpu: "0.5"
             memory: "256Mi"
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
+        terminationMessagePath: "/dev/termination-log"
+        terminationMessagePolicy: "File"
         tolerations:
-          - effect: NoExecute
-            key: node.kubernetes.io/not-ready
-            operator: Exists
+          - effect: "NoExecute"
+            key: "node.kubernetes.io/not-ready"
+            operator: "Exists"
             tolerationSeconds: 300
-          - effect: NoExecute
-            key: node.kubernetes.io/unreachable
-            operator: Exists
+          - effect: "NoExecute"
+            key: "node.kubernetes.io/unreachable"
+            operator: "Exists"
             tolerationSeconds: 300
