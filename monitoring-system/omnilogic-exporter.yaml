@@ -34,7 +34,7 @@ spec:
               name: omnilogic-exporter
         image: kmbulebu/omnilogic_exporter
         imagePullPolicy: IfNotPresent
-        name: omnilogic-exporter        
+        name: omnilogic-exporter
         ports:
         - containerPort: 9190
           name: omnilogic
@@ -56,7 +56,7 @@ spec:
             cpu: "0.5"
             memory: "256Mi"
         terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File    
+        terminationMessagePolicy: File
         tolerations:
           - effect: NoExecute
             key: node.kubernetes.io/not-ready
