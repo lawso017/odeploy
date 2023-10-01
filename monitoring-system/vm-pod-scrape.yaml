@@ -2,14 +2,14 @@
 kind: VMPodScrape
 apiVersion: operator.victoriametrics.com/v1beta1
 metadata:
-  name: node-exporter
+  name: omnilogic-exporter
   namespace: monitoring-system
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: node-exporter
+      app.kubernetes.io/name: omnilogic-exporter
   podMetricsEndpoints:
-    - port: prometheus
+    - port: omnilogic
       path: /metrics
       relabelConfigs:
         - sourceLabels:
