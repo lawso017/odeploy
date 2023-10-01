@@ -28,9 +28,9 @@ helm:
 
 diff:
   comparePatches:
-  - apiVersion: apps/v1
+  - apiVersion: operator.victoriametrics.com/v1beta1
     kind: VMSingle
     name: vm-k8s-victoria-metrics-k8s-stack
     namespace: monitoring-system
     operations:
-    - {"op": "remove", "path": "/spec" }
+    - {"op": "remove", "path": "/spec/extraArgs" }
