@@ -16,8 +16,11 @@ spec:
         app.kubernetes.io/name: omnilogic-exporter
     spec:
       containers:
-      - args: ["--omnilogic.username=${OMNILOGIC_USERNAME}", "--omnilogic.password=${OMNILOGIC_PASSWORD}"]
-        command: ["/bin/omnilogic_exporter"]
+      - args: 
+        - "--omnilogic.username=${OMNILOGIC_USERNAME}"
+        - "--omnilogic.password=${OMNILOGIC_PASSWORD}"
+        command:
+        - "/bin/omnilogic_exporter"
         env:
         - name: OMNILOGIC_USERNAME
           valueFrom:
