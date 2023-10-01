@@ -1,4 +1,0 @@
-defaultNamespace: monitoring-system
-
-dependsOn:
-  - name: vm-vm
