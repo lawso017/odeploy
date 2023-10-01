@@ -18,6 +18,7 @@ spec:
       containers:
       - name: omnilogic-exporter
         image: kmbulebu/omnilogic_exporter
+        imagePullPolicy: IfNotPresent
         env:
         - name: OMNILOGIC_USERNAME
           valueFrom:
@@ -44,6 +45,15 @@ spec:
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
+        resources:
+          limits:
+            cpu: "1"
+            memory: "512Mi"
+          requests:
+            cpu: "0.5"
+            memory: "256Mi"
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File    
         tolerations:
           - effect: NoExecute
             key: node.kubernetes.io/not-ready
@@ -52,11 +62,4 @@ spec:
           - effect: NoExecute
             key: node.kubernetes.io/unreachable
             operator: Exists
-            tolerationSeconds: 300          
-        resources:
-          limits:
-            cpu: "1"
-            memory: "512Mi"
-          requests:
-            cpu: "0.5"
-            memory: "256Mi"
+            tolerationSeconds: 300
