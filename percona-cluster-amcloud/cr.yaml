@@ -76,7 +76,7 @@ spec:
     resources:
       limits:
         cpu: 2.0
-        memory: 4Gi
+        memory: 3Gi
 
     # sidecars:
     # - name: utility
