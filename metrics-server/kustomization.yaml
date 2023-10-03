@@ -1,3 +1,6 @@
+# https://www.zeng.dev/post/2023-kubeadm-enable-kubelet-serving-certs/
+# Serve insecurely unless we want the above
+
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
