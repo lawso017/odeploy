@@ -75,8 +75,8 @@ spec:
     replicas: 3
     resources:
       limits:
-        cpu: 1.0
-        memory: 1Gi
+        cpu: 1.5
+        memory: 2Gi
 
     # sidecars:
     # - name: utility
