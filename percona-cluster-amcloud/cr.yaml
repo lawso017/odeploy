@@ -75,8 +75,8 @@ spec:
     replicas: 3
     resources:
       limits:
-        cpu: 2.0
-        memory: 3Gi
+        cpu: 1.5
+        memory: 2500Mi
 
     # sidecars:
     # - name: utility
@@ -116,7 +116,7 @@ spec:
 
   proxy:
     pgBouncer:
-      replicas: 3
+      replicas: 0
       image: perconalab/percona-postgresql-operator:main-ppg14-pgbouncer
 #      exposeSuperusers: true
 #      resources:
