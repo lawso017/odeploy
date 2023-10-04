@@ -269,7 +269,7 @@ spec:
           superuser_reserved_connections: 8
           max_prepared_transactions: 32
           work_mem: 10MB
-          maintenance_work_mem: 2GB
+          maintenance_work_mem: 2MB
           huge_pages: off
 
           fsync: on
