@@ -75,8 +75,8 @@ spec:
     replicas: 3
     resources:
       limits:
-        cpu: 500m
-        memory: 500Mi
+        cpu: 4.0
+        memory: 8Gi
 
     # sidecars:
     # - name: utility
@@ -112,11 +112,11 @@ spec:
       - ReadWriteOnce
       resources:
         requests:
-          storage: 20Gi
+          storage: 50Gi
 
   proxy:
     pgBouncer:
-      replicas: 1
+      replicas: 3
       image: perconalab/percona-postgresql-operator:main-ppg14-pgbouncer
 #      exposeSuperusers: true
 #      resources:
@@ -269,7 +269,7 @@ spec:
           superuser_reserved_connections: 8
           max_prepared_transactions: 32
           work_mem: 10MB
-          maintenance_work_mem: 2MB
+          maintenance_work_mem: 2GB
           huge_pages: off
 
           fsync: on
