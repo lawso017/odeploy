@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: odoocker
+  namespace: odoocker
+  labels:
+    app.kubernetes.io/name: odoocker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: odoocker
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: odoocker
+    spec:
+      containers:
+      - image: bjlawson/odoocker-odoo:latest
+        imagePullPolicy: IfNotPresent
+        name: odoocker
+        ports:
+        - containerPort: 8069
+          name: odoo_http
+          protocol: TCP
+        - containerPort: 8070
+          name: odoo_debug
+          protocol: TCP
+        - containerPort: 8071
+          name: odoo_xmlrpcs
+          protocol: TCP
+        - containerPort: 8072
+          name: odoo_gevent
+          protocol: TCP
+        # readinessProbe:
+        #   failureThreshold: 3
+        #   httpGet:
+        #     path: /metrics
+        #     port: smartthings
+        #     scheme: HTTP
+        #   periodSeconds: 30
+        #   successThreshold: 1
+        #   timeoutSeconds: 10
+        resources:
+          limits:
+            cpu: "4"
+            memory: 4Gi
+          requests:
+            cpu: "2"
+            memory: 2Gi
+        # terminationMessagePath: /dev/termination-log
+        # terminationMessagePolicy: File
+        # tolerations:
+        #   - effect: NoExecute
+        #     key: node.kubernetes.io/not-ready
+        #     operator: Exists
+        #     tolerationSeconds: 300
+        #   - effect: NoExecute
+        #     key: node.kubernetes.io/unreachable
+        #     operator: Exists
+        #     tolerationSeconds: 300
