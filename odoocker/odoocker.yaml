@@ -26,16 +26,16 @@ spec:
         name: odoocker
         ports:
         - containerPort: 8069
-          name: odoo_http
+          name: odoo-http
           protocol: TCP
         - containerPort: 8070
-          name: odoo_debug
+          name: odoo-debug
           protocol: TCP
         - containerPort: 8071
-          name: odoo_xmlrpcs
+          name: odoo-xmlrpcs
           protocol: TCP
         - containerPort: 8072
-          name: odoo_gevent
+          name: odoo-gevent
           protocol: TCP
         # readinessProbe:
         #   failureThreshold: 3
